@@ -1,0 +1,9 @@
+baseURL = 'http://example.org'
+languageCode = 'ja'
+theme = 'ananke'  # ここでテーマを指定
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # HTML許可設定
+
