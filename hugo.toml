@@ -1,4 +1,4 @@
-baseURL = 'http://example.org'
+baseURL = 'https://move2images.com/'
 languageCode = 'ja'
 theme = 'ananke'  # ここでテーマを指定
 
