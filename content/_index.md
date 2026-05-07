@@ -16,15 +16,23 @@ draft: false
 
 ## 動画がセリフ割動画集になります！
 
+### サンプル
+
+**変換前：普通の会議動画(6MB)**
+
  <video width="100%" controls>
   <source src="videos/move2images.mp4" type="video/mp4">
 </video>
 
 <img src="images/bottom_allow.png" alt="⬇" width="500" height="300">
 
+**変換後：セリフ付き画像集（例: 1.6MB）＋文字検索OK**
+
 <div style="max-height: 500px; overflow-y: auto;">
   <img src="images/imagesImages.png" style="width: 100%;">
 </div>
+
+## 特徴
 
 ### 動画圧縮するよりも、**十倍以上**サイズが小さい。
 

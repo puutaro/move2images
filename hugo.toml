@@ -1,4 +1,5 @@
 baseURL = 'https://puutaro.github.io/move2images/'
+baseURL = 'https://github.io'
 languageCode = 'ja'
 theme = 'ananke'  # ここでテーマを指定
 
