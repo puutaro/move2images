@@ -1,4 +1,4 @@
-baseURL = 'https://move2images.com/'
+baseURL = 'https://github.io'
 languageCode = 'ja'
 theme = 'ananke'  # ここでテーマを指定
 
