@@ -20,21 +20,21 @@ draft: false
   <source src="videos/move2images.mp4" type="video/mp4">
 </video>
 
-<img src="/images/bottom_allow.png" alt="⬇" width="500" height="300">
+<img src="images/bottom_allow.png" alt="⬇" width="500" height="300">
 
 <div style="max-height: 500px; overflow-y: auto;">
-  <img src="/images/imagesImages.png" style="width: 100%;">
+  <img src="images/imagesImages.png" style="width: 100%;">
 </div>
 
 ### 動画圧縮するよりも、**十倍以上**サイズが小さい。
 
-<img src="/images/bottom_allow.png" alt="⬇" width="500" height="100">
+<img src="images/bottom_allow.png" alt="⬇" width="500" height="100">
 
 捨てがたい動画等に。  
 
 ### 動画をコマ割で見れる。
 
-<img src="/images/bottom_allow.png" alt="⬇" width="500" height="100">
+<img src="images/bottom_allow.png" alt="⬇" width="500" height="100">
 
 通常の三倍の速度で閲覧   
 待てない現代人への近代兵器投入  
@@ -42,7 +42,7 @@ draft: false
 
 ### 文字検索可能。
 
-<img src="/images/bottom_allow.png" alt="⬇" width="500" height="100">
+<img src="images/bottom_allow.png" alt="⬇" width="500" height="100">
 
 動画を実質文字検索可能に。  
 動画を電子書類化。  
