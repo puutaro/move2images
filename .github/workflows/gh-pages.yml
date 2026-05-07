@@ -1,35 +1,69 @@
-name: Hugo
+name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
     branches:
-      - master  # mainにプッシュされた時のみ実行（無限ループ防止）
+      - master  # masterにプッシュされたら実行
 
 jobs:
-  gh-pages:
+  build-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  # v3以降、デプロイにこの権限が必要な場合があります
     steps:
       - name: Checkout
-        uses: actions/checkout@v4  # 最新版に更新
+        uses: actions/checkout@v4
         with:
-          submodules: true
-          fetch-depth: 0    # Hugoで.GitInfo等を使う場合に推奨
+          submodules: recursive  # テーマをサブモジュールで管理している場合
+          fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3  # 最新版に更新
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
-          extended: true    # SCSS/SASSなどを使うテーマの場合は必須
+          extended: true # Hugo Extended版を使う場合
 
       - name: Build
         run: hugo --minify
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4  # 最新版に更新
-        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-hugo-deploy@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public  # 明示的に指定（デフォルトもpublicですが、より安全です）
-          publish_branch: gh-pages
+          publish_dir: ./public
+          publish_branch: gh-pages  # 公開用ブランチを指定
+
+
+# name: Hugo
+
+# on:
+#   push:
+#     branches:
+#       - master  # mainにプッシュされた時のみ実行（無限ループ防止）
+
+# jobs:
+#   gh-pages:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: write  # v3以降、デプロイにこの権限が必要な場合があります
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4  # 最新版に更新
+#         with:
+#           submodules: true
+#           fetch-depth: 0    # Hugoで.GitInfo等を使う場合に推奨
+
+#       - name: Setup Hugo
+#         uses: peaceiris/actions-hugo@v3  # 最新版に更新
+#         with:
+#           hugo-version: 'latest'
+#           extended: true    # SCSS/SASSなどを使うテーマの場合は必須
+
+#       - name: Build
+#         run: hugo --minify
+
+#       - name: Deploy
+#         uses: peaceiris/actions-gh-pages@v4  # 最新版に更新
+#         if: github.ref == 'refs/heads/main'
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           publish_dir: ./public  # 明示的に指定（デフォルトもpublicですが、より安全です）
+#           publish_branch: gh-pages
