@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/home/haumi/デスクトップ/share/move2images_svc/move2images_pages",
+	"sourceRoot": "/home/runner/work/move2images/move2images",
 	"sources": [
 		"ananke/css/main.css"
 	],
